@@ -1,0 +1,24 @@
+{
+  "name": "node-sql",
+  "version": "1.0.0",
+  "description": "First project implementing both node and mySQL",
+  "main": "bamazonCustomer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephencheng91/Node-SQL.git"
+  },
+  "author": "Stephen Cheng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stephencheng91/Node-SQL/issues"
+  },
+  "homepage": "https://github.com/stephencheng91/Node-SQL#readme",
+  "dependencies": {
+    "cli-table": "^0.3.1",
+    "inquirer": "^6.3.1",
+    "mysql": "^2.17.1"
+  }
+}
