@@ -81,7 +81,7 @@ function purchasing(){
         connection.query("SELECT * FROM products WHERE id=" + res.id, function(err, data){
  
             if(parseInt(res.quantity) <= parseInt(data[0].stock_quantity)){
-                    console.log("inside the if")
+                    // console.log("inside the if")
 
                     //update the db with the new value
                     connection.query("UPDATE products SET ? WHERE ?",
@@ -97,6 +97,11 @@ function purchasing(){
                         purchasing();
                     }
                     )}
+                    else {
+                        console.log("Insufficient Quantity\nPlease re-enter the purchase");
+                        purchasing();
+
+                    }
         })
     })
     
