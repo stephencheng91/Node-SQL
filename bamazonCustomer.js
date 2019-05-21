@@ -94,12 +94,28 @@ function purchasing(){
                         }
                     ], function(err,response){
                         console.log("Total Price: "+ data[0].price*res.quantity);
-                        purchasing();
+                        inquirer.prompt([
+                            {
+                                type: "confirm",
+                                message: "Continue shopping?",
+                                name: "continueShopping",
+                                default: true
+                            }
+                        ]).then(function(response){
+                            //console.log(response);
+                            //response is default to be true
+                            if(response.continueShopping === true){
+                                showAll();
+                            }
+                            else{
+                                console.log("Thank you for shopping with us!")
+                            }
+                            
+                        })
                     }
                     )}
                     else {
                         console.log("Insufficient Quantity\nPlease re-enter the purchase");
-                        purchasing();
 
                     }
         })
